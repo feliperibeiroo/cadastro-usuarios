@@ -16,7 +16,7 @@ SECRET: Chave aleatória do algoritmo SHA-256 para criptografia do token JWT;
 POSTGRES_URL: URL do banco de dados (atentar que no arquivo docker-compose a variável é setada pelo link "db");
 POSTGRES_PASSWORD: Senha do banco de dados Postgres.
 
-## db (Banco de Dados)
+### db (Banco de Dados)
 O banco de dados é construido no docker-compose e linkado ao container da aplicação backend (cadastro-usuarios-ws).
 
 ```yml
