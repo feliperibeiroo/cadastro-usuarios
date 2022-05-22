@@ -10,7 +10,7 @@ Os projetos <b>cadastro-usuarios-web</b> e <b>cadastro-usuarios-ws</b> possuem o
 - BASE_URL: URL da aplicação backend (atentar que no arquivo docker-compose a variável é setada pelo link "backend").
 
 ### cadastro-usuarios-ws (Backend)
-- PORT: Porta da aplicação backen;
+- PORT: Porta da aplicação backend;
 - HOST: Endereço (HOST) da aplicação backend;
 - SECRET: Chave aleatória do algoritmo SHA-256 para criptografia do token JWT;
 - POSTGRES_URL: URL do banco de dados (atentar que no arquivo docker-compose a variável é setada pelo link "db");
