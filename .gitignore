@@ -92,5 +92,6 @@ cadastro-usuarios-web/*.swp
 cadastro-usuarios-ws/.env
 cadastro-usuarios-ws/node_modules/
 cadastro-usuarios-ws/.git
+cadastro-usuarios-web/.git
 
 .env-db
