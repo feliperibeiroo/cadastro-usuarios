@@ -1,6 +1,8 @@
 # Cadastro de Usuários
 ## Descrição
-Aplicação de cadastro de usuários
+<img src="https://img.shields.io/badge/Docker-lightgray">
+
+Aplicação de cadastro de usuários (docker-compose).
 
 ## Instruções para execução
 - Faça o clone do projeto:
