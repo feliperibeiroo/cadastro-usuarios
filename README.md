@@ -25,4 +25,4 @@ docker-compose up
 A aplicação pode ser acessada localmente pelo endereço: <a href="http://localhost:3000/login">http://localhost:3000/login</a>
 
 ## Acessando a aplicação na internet
-A aplicação está hospedada na Heroku e pode ser acessada pelo endereço: <a href="https://cadastro-usuarios-web.herokuapp.com/login">https://cadastro-usuarios-web.herokuapp.com/login</a>
+A aplicação está hospedada no Heroku e pode ser acessada pelo endereço: <a href="https://cadastro-usuarios-web.herokuapp.com/login">https://cadastro-usuarios-web.herokuapp.com/login</a>
