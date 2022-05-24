@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.6'
 
 services:
 
@@ -12,6 +12,8 @@ services:
       - POSTGRES_USER=postgres
     ports:
       - 5432:5432
+    networks:
+      - net
 
   backend:
     depends_on:
@@ -22,14 +24,14 @@ services:
       - PORT=8080
       - HOST=0.0.0.0
       - SECRET=fj23b7FH37hH30maSM37nf7fhM8f72fo6sfash
-      - POSTGRES_URL=127.0.0.1
+      - POSTGRES_URL=db
       - POSTGRES_PASSWORD=1j6G7Ri3UIewT3B
-        POSTGRES_DB=db
+      - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
+    networks:
+      - net
     ports:
       - 8080:8080
-    links:
-      - db
 
   frontend:
     depends_on:
@@ -39,8 +41,10 @@ services:
     environment:
       - PORT=3000
       - BASE_URL=http://localhost:8080
+    networks:
+      - net
     ports:
       - 3000:3000
-  volumes:
-    db:
-      driver: local
+networks:
+  net:
+    driver: bridge
