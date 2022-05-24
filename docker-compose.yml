@@ -5,8 +5,11 @@ services:
   db:
     image: postgres
     restart: always
-    env_file:
-      - db.env
+    environment:
+      - POSTGRES_URL=127.0.0.1
+      - POSTGRES_PASSWORD=1j6G7Ri3UIewT3B
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
     ports:
       - 5432:5432
 
@@ -15,25 +18,29 @@ services:
       - db
     build: ./cadastro-usuarios-ws/
     restart: always
-    env_file:
-      - ./cadastro-usuarios-ws/.env
     environment:
-      POSTGRES_URL: db
+      - PORT=8080
+      - HOST=0.0.0.0
+      - SECRET=fj23b7FH37hH30maSM37nf7fhM8f72fo6sfash
+      - POSTGRES_URL=127.0.0.1
+      - POSTGRES_PASSWORD=1j6G7Ri3UIewT3B
+        POSTGRES_DB=db
+      - POSTGRES_USER=postgres
     ports:
       - 8080:8080
     links:
-        - db
+      - db
 
   frontend:
     depends_on:
       - backend
     build: ./cadastro-usuarios-web/
     restart: always
-    env_file:
-      - ./cadastro-usuarios-web/.env
     environment:
-      BASE_URL: backend
+      - PORT=3000
+      - BASE_URL=http://localhost:8080
     ports:
       - 3000:3000
-    links:
-        - backend
+  volumes:
+    db:
+      driver: local
